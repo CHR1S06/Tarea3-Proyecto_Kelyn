@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function addTask(taskText) {
         const li = document.createElement('li');
 
-        
+        // Creacion de la estructura de la tarea
         li.innerHTML = `
             <span class="task-text">${taskText}</span>
             <button class="delete-btn">Eliminar</button>
         `;
 
-        
+        // Añadir botón para marcar la tarea como completada (Feature/Completar Tarea)
         li.addEventListener('click', function() {
             li.classList.toggle('completed');
         });
