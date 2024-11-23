@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
+    // Permitir agregar tarea al presionar Enter (Feature/Proceso agregar)
     taskInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
             const taskText = taskInput.value.trim();
