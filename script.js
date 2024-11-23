@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             li.classList.toggle('completed');
         });
 
-        
+        // Añadir botón para eliminar la tarea (Feature/Eliminar Tarea)
         const deleteButton = li.querySelector('.delete-btn');
         deleteButton.addEventListener('click', function(event) {
             event.stopPropagation();
