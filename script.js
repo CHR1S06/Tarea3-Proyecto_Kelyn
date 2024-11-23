@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
             li.remove();
         });
 
-        
+        // Añadir la tarea a la lista
         taskList.appendChild(li);
 
-        
+        // Limpiar el campo de entrada
         taskInput.value = '';
     }
 
-    
+    // Evento para el botón de agregar tarea (Feature/Botón agregar)
     addTaskButton.addEventListener('click', function() {
         const taskText = taskInput.value.trim();
 
