@@ -7,32 +7,32 @@ document.addEventListener('DOMContentLoaded', function() {
     function addTask(taskText) {
         const li = document.createElement('li');
 
-        
+        // Creacion de la estructura de la tarea
         li.innerHTML = `
             <span class="task-text">${taskText}</span>
             <button class="delete-btn">Eliminar</button>
         `;
 
-        
+        // Añadir botón para marcar la tarea como completada (Feature/Completar Tarea)
         li.addEventListener('click', function() {
             li.classList.toggle('completed');
         });
 
-        
+        // Añadir botón para eliminar la tarea (Feature/Eliminar Tarea)
         const deleteButton = li.querySelector('.delete-btn');
         deleteButton.addEventListener('click', function(event) {
             event.stopPropagation();
             li.remove();
         });
 
-        
+        // Añadir la tarea a la lista
         taskList.appendChild(li);
 
-        
+        // Limpiar el campo de entrada
         taskInput.value = '';
     }
 
-    
+    // Evento para el botón de agregar tarea (Feature/Botón agregar)
     addTaskButton.addEventListener('click', function() {
         const taskText = taskInput.value.trim();
 
